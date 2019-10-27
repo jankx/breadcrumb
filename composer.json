@@ -1,0 +1,14 @@
+{
+    "name": "jankx/breadcrumb",
+    "description": "The embed UI Breadcrumb for WordPress plugins and WordPress themes",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jankx Framework",
+            "email": "puleeno@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
