@@ -10,7 +10,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "puleeno/schema-org": "dev-master"
+    },
     "autoload": {
         "psr-4": {
             "Jankx\\Breadcrumb\\": "src/"
