@@ -13,17 +13,25 @@ function jankx_breadcrumb() {
         $callable,
         apply_filters(
             'jankx_breadcrumb_callback_args',
-            array(),
+            $breadcrumb->getArgs(),
             $breadcrumb
         )
     );
 }
 
 function jankx_load_breadcrumb() {
+    if (is_home() || is_front_page()) {
+        return;
+    }
+    $detector = Compatibles::detect();
+    $detector->findCallable();
+    if (!$detector->hasBreadcrumb()) {
+        return;
+    }
     ?>
     <div id="jankx-breacrumb" class="breadcrumb">
         <?php jankx_open_container(); ?>
-        <?php jankx_breadcrumb(); ?>
+        <?php echo jankx_breadcrumb(); ?>
         <?php jankx_close_container(); ?>
     </div>
     <?php
