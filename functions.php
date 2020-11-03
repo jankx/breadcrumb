@@ -18,3 +18,14 @@ function jankx_breadcrumb() {
         )
     );
 }
+
+function jankx_load_breadcrumb() {
+    ?>
+    <div id="jankx-breacrumb" class="breadcrumb">
+        <?php jankx_open_container(); ?>
+        <?php jankx_breadcrumb(); ?>
+        <?php jankx_close_container(); ?>
+    </div>
+    <?php
+}
+add_action('jankx_template_before_main_content_sidebar', 'jankx_load_breadcrumb');
